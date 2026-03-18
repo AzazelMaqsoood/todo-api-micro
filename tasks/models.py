@@ -1,7 +1,7 @@
 from django.db import models
 
 class Task(models.Model):
-    PRIOTIY_CHOICES = [
+    PRIORITY_CHOICES = [
         ("low", "Low"),
         ("medium", "Medium"),
         ("high", "High")
@@ -10,8 +10,8 @@ class Task(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     is_completed = models.BooleanField(default=False)
-    priority = models.CharField(max_length=10, choices=PRIOTIY_CHOICES, default="medium")
-    created_at = models.DateField(auto_now_add=True)
+    priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default="medium")
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
