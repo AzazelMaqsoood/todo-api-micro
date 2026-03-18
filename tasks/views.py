@@ -6,4 +6,5 @@ from .serializers import TaskSerializer
 class TaskViewSet(ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    filterset_fields = ["is_completed", "priority", "title", "created_at"]
 
