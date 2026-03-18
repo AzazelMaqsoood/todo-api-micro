@@ -8,4 +8,4 @@ class TaskSerializer(serializers.ModelSerializer):
                   'description',
                   'is_completed',
                   'priority',
-                  'created_ad']
+                  'created_at']
